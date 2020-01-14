@@ -2,7 +2,7 @@
 import React from 'react'
 import isDarkColor from 'is-dark-color'
 
-export default ({ thing: {text, link, color}, redirect, pageId, width }) => {
+export default ({ thing: {text, link, color}, redirect, pageId, styles }) => {
 
   function runRedirect() {
     if(link) {
@@ -16,7 +16,7 @@ export default ({ thing: {text, link, color}, redirect, pageId, width }) => {
       style={{
         backgroundColor: color,
         color: isDarkColor(color) ? 'white' : 'black',
-        width: `${width}%`
+        ...styles
       }}
       onClick={runRedirect}
     >
