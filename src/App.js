@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import React, { useState } from 'react';
+import Page from './components/Page'
+import pages from './pages'
 import './App.css';
 
 function App() {
+
+  const [ [ next, backStack ], setDirectState ] = useState(['index', []])
+
+  const setDirect = (nextId, newBackStack) => setDirectState([nextId, newBackStack])
+
+  const redirect = (nextId, backId) => {
+    console.log('redirect', [backId, ...backStack])
+    setDirect(nextId, [backId, ...backStack])
+  }
+
+  const goBack = () => {
+    const [backId, ...newbackStack] = backStack
+    console.log('back', backId, newbackStack)
+    setDirect(backId, newbackStack)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Page things={pages[next]} id={next} back={backStack.length} goBack={goBack} redirect={redirect} />
     </div>
   );
 }

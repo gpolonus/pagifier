@@ -1,0 +1,53 @@
+index:
+- text: 'Step #1 – Secure the Keys'
+  link: "#1"
+  color: "#fff"
+- text: 'Step #2 – Ascend From Darkness'
+  link: "#2"
+  color: "#fff"
+- text: 'Step #3 – Rain Fire'
+  link: "#3"
+  color: "#fff"
+- text: 'Step #4 – Unleash the Horde'
+  link: "#4"
+  color: "#fff"
+- text: 'Step #5 – Skewer the Winged Beast'
+  link: "#5"
+  color: "#fff"
+- text: 'Step #6 – Wield a Fist of Iron'
+  link: "#6"
+  color: "#fff"
+- text: 'Step #7 – Raise Hell'
+  link: "#7"
+  color: "#fff"
+- text: 'Step #8 – Freedom'
+  link: "#8"
+  color: "#fff"
+"#1":
+- text: Activate All generators
+  color: "#778aa8"
+- text: Build Staves
+  link: build_staves
+  color: "#0d5ede"
+build_staves:
+- text: 'Red Fire: Robot, Gen #6, and Plane'
+  link: 'fire_staff'
+  color: '#f20c32'
+- text: 'Purple Lightning: Take the Tank Around'
+  link: 'lightning_staff'
+  color: '#a709eb'
+- text: 'Blue Ice: Dig up the parts'
+  color: '#1511f2'
+- text: 'Yellow Wind: Get in the feet'
+  color: '#c2c42f'
+- text: 'Gramaphone: in the Excavation Site'
+  color: '#505241'
+- text: 'Building'
+  color: '#6e4f37'
+# "#2": []
+# "#3": []
+# "#4": []
+# "#5": []
+# "#6": []
+# "#7": []
+# "#8": []
