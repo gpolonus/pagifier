@@ -14,10 +14,10 @@
     "yamljs": "^0.3.0"
   },
   "scripts": {
-    "start": "npx build-pages && react-scripts start",
-    "build": "npx build-pages && react-scripts build",
+    "start": "npm run build-pages && react-scripts start",
+    "build": "npm run build-pages && react-scripts build",
     "build-pages": "npx yaml2json ./bop2origins.yml > ./src/pages.json",
-    "start-pages": "onchange './bop2origins.yml' -- npx build-pages"
+    "start-pages": "onchange './bop2origins.yml' -- npm run build-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
