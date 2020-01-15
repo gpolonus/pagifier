@@ -1,29 +1,29 @@
 index:
 - text: 'Secure the Keys'
-  link: "#1"
+  link: "step1"
   color: "#ffffff"
 - text: 'Ascend From Darkness'
-  link: "#2"
+  link: "step2"
   color: "#ffffff"
 - text: 'Rain Fire'
-  link: "#3"
+  link: "step3"
   color: "#ffffff"
 - text: 'Unleash the Horde'
-  link: "#4"
+  link: "step4"
   color: "#ffffff"
 - text: 'Skewer the Winged Beast'
-  link: "#5"
+  link: "step5"
   color: "#ffffff"
 - text: 'Wield a Fist of Iron'
-  link: "#6"
+  link: "step6"
   color: "#ffffff"
 - text: 'Raise Hell'
-  link: "#7"
+  link: "step7"
   color: "#ffffff"
 - text: 'Freedom'
-  link: "#8"
+  link: "step8"
   color: "#ffffff"
-"#1":
+"step1":
 - text: Activate All generators
   color: "#778aa8"
 - text: Build Staves
