@@ -1,6 +1,7 @@
 
 import React from 'react';
 import PagePart from './PagePart';
+import BackPart from './BackPart';
 
 function getStyles(width, left, link, back) {
   const styles = {
@@ -12,22 +13,15 @@ function getStyles(width, left, link, back) {
     styles.textDecoration = 'underline'
   }
 
-  if(back) {
-    styles.textStyles = {
-      transform: 'rotate(-90deg)'
-    }
-  }
-
   return styles
 }
 
 export default ({ pages, location, history }) => {
 
-  const id = location.pathname.slice(1)
-  const things = pages[id] || pages.index
-  console.log(id, location)
-  console.log(things)
-  const back = true
+  const pathId = location.pathname.slice(1)
+  const id = pages[pathId] ? pathId : 'index'
+  const things = pages[id]
+  const back = id !== 'index'
 
   const partUnits = 5
   const numUnits = things.length * partUnits + (back ? 1 : 0)
@@ -43,12 +37,9 @@ export default ({ pages, location, history }) => {
     <div className="Page">
       {
         back ?
-          <PagePart
-            pageId={id}
-            text="Back"
-            color="#000000"
+          <BackPart
             goBack={goBack}
-            styles={getStyles(widthUnit, 0, true, true)}
+            width={widthUnit}
           /> :
           null
       }

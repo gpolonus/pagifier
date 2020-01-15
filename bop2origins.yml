@@ -38,7 +38,7 @@ build_staves:
   color: '#1511f2'
 - text: 'Yellow Wind: Get in the feet'
   color: '#c2c42f'
-- text: 'Gramaphone & : in the Excavation Site'
+- text: 'Gramaphone: in the Excavation Site'
   color: '#505241'
 - text: 'Building'
   link: 'building'

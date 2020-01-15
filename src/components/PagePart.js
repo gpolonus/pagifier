@@ -3,21 +3,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import isDarkColor from 'is-dark-color'
 
-const log = (arg) => (console.log(arg), arg)
-
 const MaybeLink = ({ to, children: c }) => (
   to ?
     <Link to={to}>{c}</Link> :
     c
 )
 
-export default ({ text, link, color, goBack, styles }) => {
-
-  function runBack() {
-    if(goBack) {
-      goBack()
-    }
-  }
+export default ({ text, link, color, styles }) => {
 
   return (
     <MaybeLink to={link}>
@@ -25,10 +17,9 @@ export default ({ text, link, color, goBack, styles }) => {
         className="PagePart"
         style={{
           backgroundColor: color,
-          color: isDarkColor(log(color)) ? 'white' : 'black',
+          color: isDarkColor(color) ? 'white' : 'black',
           ...styles
         }}
-        onClick={runBack}
       >
         <div style={styles.textStyles}>{ text }</div>
       </div>
