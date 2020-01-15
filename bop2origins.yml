@@ -1,26 +1,26 @@
 index:
-- text: 'Step #1 – Secure the Keys'
+- text: 'Secure the Keys'
   link: "#1"
   color: "#ffffff"
-- text: 'Step #2 – Ascend From Darkness'
+- text: 'Ascend From Darkness'
   link: "#2"
   color: "#ffffff"
-- text: 'Step #3 – Rain Fire'
+- text: 'Rain Fire'
   link: "#3"
   color: "#ffffff"
-- text: 'Step #4 – Unleash the Horde'
+- text: 'Unleash the Horde'
   link: "#4"
   color: "#ffffff"
-- text: 'Step #5 – Skewer the Winged Beast'
+- text: 'Skewer the Winged Beast'
   link: "#5"
   color: "#ffffff"
-- text: 'Step #6 – Wield a Fist of Iron'
+- text: 'Wield a Fist of Iron'
   link: "#6"
   color: "#ffffff"
-- text: 'Step #7 – Raise Hell'
+- text: 'Raise Hell'
   link: "#7"
   color: "#ffffff"
-- text: 'Step #8 – Freedom'
+- text: 'Freedom'
   link: "#8"
   color: "#ffffff"
 "#1":
@@ -38,7 +38,7 @@ build_staves:
   color: '#1511f2'
 - text: 'Yellow Wind: Get in the feet'
   color: '#c2c42f'
-- text: 'Gramaphone: in the Excavation Site'
+- text: 'Gramaphone & : in the Excavation Site'
   color: '#505241'
 - text: 'Building'
   link: 'building'

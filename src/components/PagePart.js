@@ -1,26 +1,37 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import isDarkColor from 'is-dark-color'
 
-export default ({ thing: {text, link, color}, redirect, pageId, styles }) => {
+const log = (arg) => (console.log(arg), arg)
 
-  function runRedirect() {
-    if(link) {
-      redirect(link, pageId)
+const MaybeLink = ({ to, children: c }) => (
+  to ?
+    <Link to={to}>{c}</Link> :
+    c
+)
+
+export default ({ text, link, color, goBack, styles }) => {
+
+  function runBack() {
+    if(goBack) {
+      goBack()
     }
   }
 
   return (
-    <div
-      className="PagePart"
-      style={{
-        backgroundColor: color,
-        color: isDarkColor(color) ? 'white' : 'black',
-        ...styles
-      }}
-      onClick={runRedirect}
-    >
-      <div>{ text }</div>
-    </div>
+    <MaybeLink to={link}>
+      <div
+        className="PagePart"
+        style={{
+          backgroundColor: color,
+          color: isDarkColor(log(color)) ? 'white' : 'black',
+          ...styles
+        }}
+        onClick={runBack}
+      >
+        <div style={styles.textStyles}>{ text }</div>
+      </div>
+    </MaybeLink>
   )
 }
